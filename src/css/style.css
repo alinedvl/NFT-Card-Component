@@ -1,0 +1,144 @@
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color:hsl(217, 54%, 11%);
+}
+
+main{
+    background-color:hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.card{
+    background-color: hsl(216, 50%, 16%);
+    max-width: 350px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.card .image-link{
+    position: relative;
+    display: flex;
+}
+
+.card .image-link .image{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.card .image-link::before{
+    content: '';
+    background-color: cyan;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card .image-link::after{
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card .image-link:hover::before {
+    display: block;
+    opacity: 0.4;
+}
+
+.card .image-link:hover::after{
+    opacity: 1;
+}
+
+
+.card .title-link .title{
+    font-size: 22px;
+    color: #FFFFFF;
+    margin: 25px 0 20px;
+}
+
+.card .title-link .title:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.card .desc{
+    color: hsl(215, 51%, 70%); 
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 23px;
+}
+
+.card .info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.card .info .price{
+    color: hsl(178, 100%, 50%);
+    display: flex;
+}
+
+.card .info .price::before{
+    content: '';
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.card .info .days-left{
+    color: hsl(215, 51%, 70%);
+    display: flex;
+}
+
+.card .info .days-left::before{
+    content: '';
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+.card .autor{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding-top: 20px;
+}
+
+.card .autor .img-avatar{
+    max-width: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card .autor .text{
+    color: hsl(215, 51%, 70%);
+}
+
+.card .autor .text .name{
+    color: #FFFFFF;
+}
+
+.card .autor .text .name:hover{
+    color: hsl(178, 100%, 50%);   
+}
+
